@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reservoir_management_simulation.FXMLDocumentController">
+   <children>
+      <ImageView fx:id="back_lack" fitHeight="374.0" fitWidth="1080.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@滿.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="back_sky" fitHeight="263.0" fitWidth="1080.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@晴天.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="console" fitHeight="750.0" fitWidth="1167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@操作台.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tvd" fitHeight="300.0" fitWidth="300.0" layoutX="756.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@未排水.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tvu" fitHeight="260.0" fitWidth="300.0" layoutX="756.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@晴2.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="record" editable="false" layoutX="35.0" layoutY="301.0" prefHeight="216.0" prefWidth="284.0" />
+      <Label layoutX="46.0" layoutY="267.0" text="工作日誌：">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="water" editable="false" layoutX="376.0" layoutY="301.0" prefHeight="193.0" prefWidth="311.0" />
+      <Label layoutX="382.0" layoutY="273.0" text="水庫資訊">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="open_gate" layoutX="445.0" layoutY="524.0" mnemonicParsing="false" onAction="#gate_control" text="開">
+         <toggleGroup>
+            <ToggleGroup fx:id="gate" />
+         </toggleGroup>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="closs_gate" layoutX="621.0" layoutY="524.0" mnemonicParsing="false" onAction="#gate_control" selected="true" text="關" toggleGroup="$gate">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="make_power" layoutX="46.0" layoutY="588.0" mnemonicParsing="false" selected="true" text="發電">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="power" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="no_power" layoutX="181.0" layoutY="588.0" mnemonicParsing="false" text="停止發電" toggleGroup="$power">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="next_day_button" layoutX="757.0" layoutY="580.0" mnemonicParsing="false" onAction="#next_day" text="度過一天">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <TextField fx:id="day" editable="false" layoutX="906.0" layoutY="270.0" prefHeight="39.0" prefWidth="153.0" text="日期：第1天" />
+      <RadioButton fx:id="helf_open_gate1" layoutX="522.0" layoutY="524.0" mnemonicParsing="false" onAction="#gate_control" text="半開" toggleGroup="$gate">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="382.0" layoutY="524.0" text="閘門">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="alarm" layoutX="376.0" layoutY="588.0" mnemonicParsing="false" text="發布洩洪警報">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="give_water" layoutX="46.0" layoutY="540.0" mnemonicParsing="false" selected="true" text="供水">
+         <toggleGroup>
+            <ToggleGroup fx:id="gw" />
+         </toggleGroup>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="no_give_water" layoutX="181.0" layoutY="540.0" mnemonicParsing="false" text="停止供水" toggleGroup="$gw">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="906.0" layoutY="580.0" mnemonicParsing="false" onAction="#one_month" text="度過一月">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="592.0" layoutY="580.0" mnemonicParsing="false" onAction="#man_make_rain" text="人工雨">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
